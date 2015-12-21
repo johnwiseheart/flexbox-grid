@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Flexbox Grid</title>
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="demo.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Flexbox Grid System <small>By John Wiseheart</small></h1>
+      <p>With the intent of improving my understanding of flexbox, I set out to
+        write my own grid system. It turned out much simpler than I expected,
+        and I will be using my own grid in future - its so simple.</p>
+      <p>The grid system supports both equal and unequal ratios of items, as
+        well as breakpoints.</p>
+
+      <h2>Equal Ratio Grid</h2>
+      <p>The equal ratio grid works with simple <code>row</code> and
+        <code>column</code> classes. Each <code>column</code> in a
+        <code>row</code> is equally spaced.</p>
+      <div class="row row-sm">
+        <div class="column">1</div>
+      </div>
+      <div class="row row-sm">
+        <div class="column">2/3</div>
+        <div class="column">1/3</div>
+      </div>
+      <div class="row row-sm">
+        <div class="column">1/3</div>
+        <div class="column">1/3</div>
+        <div class="column">1/3</div>
+      </div>
+      <div class="row row-sm">
+        <div class="column">1/4</div>
+        <div class="column">1/4</div>
+        <div class="column">1/4</div>
+        <div class="column">1/4</div>
+      </div>
+      <br />
+
+      <h2>Unequal Ratio Grid</h2>
+      <p>Similarly, the unequal ratio grid works with <code>row</code> and
+        <code>column</code> classes, as well as <code>column-*</code> classes.
+        Depending on the number in the <code>column-*</code> class, the item
+        will be at an n:1 ratio in width with a standard item.</p>
+      <div class="row row-sm">
+        <div class="column column-3x">column-3x</div>
+        <div class="column column-3x">column-3x</div>
+        <div class="column column-3x">column-3x</div>
+      </div>
+      <div class="row row-sm">
+        <div class="column column-3x">column-3x</div>
+        <div class="column column-2x">column-2x</div>
+        <div class="column column-3x">column-3x</div>
+      </div>
+      <div class="row row-sm">
+        <div class="column column-3x">column-3x</div>
+        <div class="column">column-1x</div>
+        <div class="column column-3x">column-3x</div>
+      </div>
+      <div class="row row-sm">
+        <div class="column">column-1x</div>
+        <div class="column column-2x">column-2x</div>
+        <div class="column column-2x">column-2x</div>
+        <div class="column">column-1x</div>
+      </div>
+      <br />
+
+      <h2>Nested Items</h2>
+      <p>The grid system supports nested items, which are used by adding another
+        <code>row</code> inside a <code>column</code>.</p>
+      <div class="row row-sm">
+        <div class="column">1/2</div>
+        <div class="column">
+          <div class="row row-sm">
+            <div class="column">1/3 * 1/2 (ish)</div>
+            <div class="column">1/3 * 1/2 (ish)</div>
+            <div class="column">1/3 * 1/2 (ish)</div>
+          </div>
+        </div>
+      </div>
+      <br />
+
+      <h2>Breakpoints</h2>
+      <p>The grid system has 4 different breakpoints, set with an additional
+        class <code>row-*</code>. Depending on how you set the breakpoint, the
+        items will collapse into a single column with a specific range of screen
+        sizes. Each of these rows have different breakpoints - try changing the
+        width of your browser window.</p>
+      <div class="row row-sm">
+        <div class="column">1/4 small</div>
+        <div class="column">1/4 small</div>
+        <div class="column">1/4 small</div>
+        <div class="column">1/4 small</div>
+      </div>
+      <div class="row row-md">
+        <div class="column">1/4 medium</div>
+        <div class="column">1/4 medium</div>
+        <div class="column">1/4 medium</div>
+        <div class="column">1/4 medium</div>
+      </div>
+      <div class="row row-lg">
+        <div class="column">1/4 large</div>
+        <div class="column">1/4 large</div>
+        <div class="column">1/4 large</div>
+        <div class="column">1/4 large</div>
+      </div>
+      <div class="row row-xl">
+        <div class="column">1/4 extra-large</div>
+        <div class="column">1/4 extra-large</div>
+        <div class="column">1/4 extra-large</div>
+        <div class="column">1/4 extra-large</div>
+      </div>
+      <br />
+
+    </div>
+  </body>
+</html>
